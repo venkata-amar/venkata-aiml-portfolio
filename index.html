@@ -125,6 +125,44 @@
   .refs{ margin-top:6px; font-size:13.5px; color:var(--slate-dark); }
   .refs li{ margin-bottom:4px; list-style:none; }
 
+  .artifact-card.text-only .artifact-meta{ padding-top:34px; }
+  .doc-excerpt{
+    background:var(--paper-dim);
+    border:1px solid #d8d4c6;
+    border-left:3px solid var(--amber);
+    border-radius:4px;
+    padding:22px 24px;
+    margin:0 28px 8px;
+    font-family:var(--serif);
+    font-size:14.5px;
+    color:var(--slate-dark);
+    line-height:1.65;
+  }
+  .doc-excerpt .excerpt-label{
+    font-family:var(--sans);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-bottom:10px;
+  }
+  .download-row{
+    padding:18px 28px 0;
+  }
+  .download-row a{
+    display:inline-block;
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--ink);
+    background:var(--paper-dim);
+    border:1px solid #d8d4c6;
+    border-radius:4px;
+    padding:9px 16px;
+    text-decoration:none;
+  }
+  .download-row a:hover{ border-color:var(--amber); }
+
   footer{ background:var(--ink); color:var(--slate); padding:50px 24px; text-align:center; font-size:13px; }
   footer a{ color:var(--paper); text-decoration:underline; }
   ::selection{ background:var(--amber); color:var(--ink); }
@@ -133,10 +171,11 @@
 <body>
 
 <div class="thread" id="thread">
-  <div class="thread-dot" style="top:6%"></div>
-  <div class="thread-dot" style="top:34%"></div>
-  <div class="thread-dot" style="top:60%"></div>
-  <div class="thread-dot" style="top:86%"></div>
+  <div class="thread-dot" style="top:5%"></div>
+  <div class="thread-dot" style="top:27%"></div>
+  <div class="thread-dot" style="top:48%"></div>
+  <div class="thread-dot" style="top:70%"></div>
+  <div class="thread-dot" style="top:90%"></div>
 </div>
 
 <header class="hero" id="top">
@@ -146,8 +185,9 @@
     <p class="tagline">Senior Cloud Data Engineer building a bridge into applied AI and machine learning.</p>
     <div class="links">
       <a href="mailto:v.gangireddy@myemail.indwes.edu">Email</a>
-      <a href="www.linkedin.com/in/gamarnathreddy" target="_blank">LinkedIn</a>
-      <a href="#artifact">View Artifact 1</a>
+      <a href="https://www.linkedin.com/in/amar-reddy-g9" target="_blank">LinkedIn</a>
+      <a href="#artifact">Artifact 1</a>
+      <a href="#artifact2">Artifact 2</a>
     </div>
   </div>
 </header>
@@ -246,6 +286,53 @@
   </div>
 </section>
 
+<section id="artifact2" class="section-pad">
+  <div class="wrap">
+    <div class="label">Artifact 2 of 5</div>
+    <h2>Machine Learning vs. Deep Learning: A Comparative Case Study</h2>
+    <p class="lede">Created for AIML-500: Machine Learning Fundamentals, Workshop Two.</p>
+
+    <div class="artifact-card text-only">
+      <div class="doc-excerpt">
+        <div class="excerpt-label">Excerpt</div>
+        "These two examples illustrate the core distinction between machine learning and deep learning: traditional machine learning works best when the important features are already known and the data is structured and limited, while deep learning is suited to large volumes of raw, unstructured data where the model must discover its own patterns. Choosing the right approach is not about which method is more advanced, but about matching the complexity of the tool to the complexity of the problem."
+      </div>
+      <div class="download-row">
+        <a href="2.3_ML_vs_DL.docx" target="_blank">Download Full Report (.docx)</a>
+      </div>
+      <div class="artifact-meta">
+        <dl>
+          <div class="field-block">
+            <dt>Introduction</dt>
+            <dd>As part of my Machine Learning Fundamentals course, I wrote a comparative case study analyzing when to use traditional machine learning versus deep learning, grounded in two real-world scenarios.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Description</dt>
+            <dd>This report examines a Support Vector Machine used for telecom customer churn prediction alongside a Convolutional Neural Network used in autonomous vehicle systems, explaining why each modeling approach fits its problem and why the alternative would not.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Objective</dt>
+            <dd>Demonstrate the ability to reason about which class of machine learning approach fits a given business or engineering problem, rather than defaulting to the most advanced available technique.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Process</dt>
+            <dd>Selected one structured-data example and one unstructured-data example, researched real-world applications for each, and built a structured argument comparing data type, feature extraction, interpretability, and computing cost across both approaches, including a summary comparison table.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Value Proposition</dt>
+            <div class="vp-subblock">
+              <div class="sub-label">Unique Value</div>
+              <dd>Shows that I can evaluate a technical approach against the actual shape of a problem, structured versus unstructured data, interpretability needs, and cost, rather than assuming more complex models are always better.</dd>
+              <div class="sub-label">Relevance</div>
+              <dd>This kind of judgment is directly relevant to my work as a data engineer, where choosing the right tool for a pipeline or model has real cost and maintainability consequences for the business.</dd>
+            </div>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap" style="margin:0 auto; max-width:720px;">
     G.V. Amarnath Reddy &middot; Data Engineering &amp; AI/ML &middot; Indiana Wesleyan University<br>
@@ -255,7 +342,7 @@
 
 <script>
   const dots = document.querySelectorAll('.thread-dot');
-  const sections = ['top','bio','value','artifact'].map(id => document.getElementById(id));
+  const sections = ['top','bio','value','artifact','artifact2'].map(id => document.getElementById(id));
   window.addEventListener('scroll', () => {
     let idx = 0;
     sections.forEach((s,i) => { if (window.scrollY + 200 >= s.offsetTop) idx = i; });
