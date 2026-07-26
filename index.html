@@ -171,11 +171,12 @@
 <body>
 
 <div class="thread" id="thread">
-  <div class="thread-dot" style="top:5%"></div>
-  <div class="thread-dot" style="top:27%"></div>
-  <div class="thread-dot" style="top:48%"></div>
-  <div class="thread-dot" style="top:70%"></div>
-  <div class="thread-dot" style="top:90%"></div>
+  <div class="thread-dot" style="top:4%"></div>
+  <div class="thread-dot" style="top:22%"></div>
+  <div class="thread-dot" style="top:40%"></div>
+  <div class="thread-dot" style="top:58%"></div>
+  <div class="thread-dot" style="top:76%"></div>
+  <div class="thread-dot" style="top:93%"></div>
 </div>
 
 <header class="hero" id="top">
@@ -188,6 +189,7 @@
       <a href="https://www.linkedin.com/in/amar-reddy-g9" target="_blank">LinkedIn</a>
       <a href="#artifact">Artifact 1</a>
       <a href="#artifact2">Artifact 2</a>
+      <a href="#artifact3">Artifact 3</a>
     </div>
   </div>
 </header>
@@ -333,6 +335,50 @@
   </div>
 </section>
 
+<section id="artifact3" class="section-pad">
+  <div class="wrap">
+    <div class="label">Artifact 3 of 5</div>
+    <h2>Explaining Neural Networks Through Everyday Analogy</h2>
+    <p class="lede">Created for AIML-500: Machine Learning Fundamentals, Workshop Three.</p>
+
+    <div class="artifact-card text-only">
+      <div class="doc-excerpt">
+        <div class="excerpt-label">Excerpt</div>
+        "Imagine a big group of friends trying to guess what's in a wrapped box. No one friend knows for sure, but each friend has one clue. Each shouts out a guess based on their one clue, and a judge combines them into one final answer. That's basically what a neural network is: a bunch of tiny decision-makers, each looking at one small piece of information, passing their opinion forward until the whole system agrees on a final answer."
+      </div>
+      <div class="artifact-meta">
+        <dl>
+          <div class="field-block">
+            <dt>Introduction</dt>
+            <dd>As part of a discussion on communicating AI concepts to non-technical audiences, I wrote a plain-language explanation of how neural networks learn, built entirely around an everyday analogy.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Description</dt>
+            <dd>This piece explains neural networks and the concept of weight adjustment during training using a story about a group of friends guessing the contents of a box, where each friend represents a neuron contributing one piece of evidence to a final decision.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Objective</dt>
+            <dd>Practice translating a technical AI concept into language accessible to a non-technical audience, applying specific communication strategies such as analogy, chunking information into digestible sections, and progressive disclosure from simple to more technical detail.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Process</dt>
+            <dd>Selected a relatable, everyday scenario to mirror how a neural network combines many small pieces of evidence, structured the explanation into three clearly labeled sections, and closed by connecting the analogy back to recognizable real-world applications like photo recognition and spam filtering.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Value Proposition</dt>
+            <div class="vp-subblock">
+              <div class="sub-label">Unique Value</div>
+              <dd>Demonstrates the ability to make complex AI concepts approachable for non-technical stakeholders, without sacrificing accuracy about how the underlying system actually works.</dd>
+              <div class="sub-label">Relevance</div>
+              <dd>This is a core skill for any data or AI professional who needs leadership, clients, or cross-functional teams to trust and understand AI systems well enough to support their adoption.</dd>
+            </div>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap" style="margin:0 auto; max-width:720px;">
     G.V. Amarnath Reddy &middot; Data Engineering &amp; AI/ML &middot; Indiana Wesleyan University<br>
@@ -342,7 +388,7 @@
 
 <script>
   const dots = document.querySelectorAll('.thread-dot');
-  const sections = ['top','bio','value','artifact','artifact2'].map(id => document.getElementById(id));
+  const sections = ['top','bio','value','artifact','artifact2','artifact3'].map(id => document.getElementById(id));
   window.addEventListener('scroll', () => {
     let idx = 0;
     sections.forEach((s,i) => { if (window.scrollY + 200 >= s.offsetTop) idx = i; });
