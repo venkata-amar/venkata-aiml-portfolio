@@ -171,12 +171,13 @@
 <body>
 
 <div class="thread" id="thread">
-  <div class="thread-dot" style="top:4%"></div>
-  <div class="thread-dot" style="top:22%"></div>
-  <div class="thread-dot" style="top:40%"></div>
-  <div class="thread-dot" style="top:58%"></div>
-  <div class="thread-dot" style="top:76%"></div>
-  <div class="thread-dot" style="top:93%"></div>
+  <div class="thread-dot" style="top:3%"></div>
+  <div class="thread-dot" style="top:19%"></div>
+  <div class="thread-dot" style="top:35%"></div>
+  <div class="thread-dot" style="top:51%"></div>
+  <div class="thread-dot" style="top:67%"></div>
+  <div class="thread-dot" style="top:83%"></div>
+  <div class="thread-dot" style="top:95%"></div>
 </div>
 
 <header class="hero" id="top">
@@ -190,6 +191,7 @@
       <a href="#artifact">Artifact 1</a>
       <a href="#artifact2">Artifact 2</a>
       <a href="#artifact3">Artifact 3</a>
+      <a href="#artifact4">Artifact 4</a>
     </div>
   </div>
 </header>
@@ -379,6 +381,50 @@
   </div>
 </section>
 
+<section id="artifact4" class="section-pad">
+  <div class="wrap">
+    <div class="label">Artifact 4 of 5</div>
+    <h2>Navigating Human Bias in AI: A Leadership Perspective</h2>
+    <p class="lede">Created for AIML-500: Machine Learning Fundamentals, Workshop Four.</p>
+
+    <div class="artifact-card text-only">
+      <div class="doc-excerpt">
+        <div class="excerpt-label">Excerpt</div>
+        "Understanding that AI bias is fundamentally a human bias problem wearing a technical disguise changes how a leader needs to approach it. A leader who only inspects results after deployment is checking the symptom, not the source. Effective navigation requires building structures that catch bias rather than relying on individual vigilance, and normalizing the idea that flagging a possible bias isn't a criticism of anyone's competence."
+      </div>
+      <div class="artifact-meta">
+        <dl>
+          <div class="field-block">
+            <dt>Introduction</dt>
+            <dd>As part of a leadership discussion on navigating human bias in AI systems, I wrote an analysis of what leaders specifically need to know and be able to do to address bias that enters AI systems through human decisions.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Description</dt>
+            <dd>This piece examines how human bias enters AI systems at multiple points, including data selection, labeling, algorithm design, testing, and interpretation, and argues that leaders need both technical literacy and organizational structures to catch bias effectively.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Objective</dt>
+            <dd>Articulate the specific knowledge and leadership behaviors required to navigate human bias in AI/ML systems, going beyond a general awareness of the problem to concrete leadership action.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Process</dt>
+            <dd>Connected the technical reality of where bias enters a data and ML pipeline to my own experience as a data engineer, then built out specific leadership behaviors, technical literacy, diverse review structures, psychological safety for flagging concerns, and intellectual humility, that address bias at a systemic rather than individual level.</dd>
+          </div>
+          <div class="field-block">
+            <dt>Value Proposition</dt>
+            <div class="vp-subblock">
+              <div class="sub-label">Unique Value</div>
+              <dd>Demonstrates the ability to connect technical understanding of how AI systems are built to practical, organizational leadership behavior, rather than treating bias as a purely technical or purely managerial problem.</dd>
+              <div class="sub-label">Relevance</div>
+              <dd>As organizations increasingly rely on AI-driven decisions, leaders who understand both the technical origins of bias and how to build structures that catch it are essential to responsible AI adoption.</dd>
+            </div>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap" style="margin:0 auto; max-width:720px;">
     G.V. Amarnath Reddy &middot; Data Engineering &amp; AI/ML &middot; Indiana Wesleyan University<br>
@@ -388,7 +434,7 @@
 
 <script>
   const dots = document.querySelectorAll('.thread-dot');
-  const sections = ['top','bio','value','artifact','artifact2','artifact3'].map(id => document.getElementById(id));
+  const sections = ['top','bio','value','artifact','artifact2','artifact3','artifact4'].map(id => document.getElementById(id));
   window.addEventListener('scroll', () => {
     let idx = 0;
     sections.forEach((s,i) => { if (window.scrollY + 200 >= s.offsetTop) idx = i; });
